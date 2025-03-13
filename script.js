@@ -15,3 +15,26 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         icon.classList.add('fa-sun');
     }
 });
+
+// The text you want to appear as typed, with the word "Developer" wrapped in a <span> for custom color
+const textToType = "Java and HTML/CSS <span class='developer'>Developer</span>";
+
+// The element to display the typed text
+const typedTextElement = document.getElementById("typed-text");
+
+// Typing speed (milliseconds between each letter)
+const typingSpeed = 150;
+
+// Function to simulate typing effect
+function typeText(text, index = 0) {
+    if (index < text.length) {
+        typedTextElement.innerHTML = text.substring(0, index + 1);
+        setTimeout(() => typeText(text, index + 1), typingSpeed);
+    }
+}
+
+// Start the typing effect when the page loads
+window.onload = () => {
+    typeText(textToType);
+};
+
