@@ -1,35 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-<body>
-
+<body class="dark-mode">
+    <div class="dotted-background"></div>
     <nav>
         <ul>
             <li>Navigation</li>
-            <li>Social</li>
+            <li class="social">
+                Social
+                <ul class="dropdown">
+                    <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a></li>
+                    <li><a href="https://github.com/your-github-profile" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a></li>
+                </ul>
+            </li>
+            <li class="icon-container" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </li>
         </ul>
     </nav>
 
-  <main>
-    <!-- Main content goes here -->
-  </main>
+    <main>
 
-  <footer>
-    <p>&copy; 2025 Mark Slaiw - Software Engineer</p>
-  </footer>
+    </main>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Mark Slaiw - Software Engineer</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>
