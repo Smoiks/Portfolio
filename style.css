@@ -5,12 +5,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Fira Code', monospace;
     transition: background-color 0.3s, color 0.3s;
     height: 1500px;
     padding-top: 80px;
     background-color: #000;
+
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;  
 }
 
 /* Dark Mode */
@@ -113,6 +122,7 @@ nav ul li {
     margin: 0 5px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 /* Social dropdown */
@@ -120,6 +130,27 @@ nav ul li {
     position: relative;
     padding: 0 15px;
     cursor: pointer;
+}
+
+.navi-gation {
+    position: relative;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.navi-gation:hover {
+    color: #ffffffc4;
+}
+
+body.light-mode .navi-gation:hover {
+    color: #9e9e9e;
+}
+
+.navi-gation:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    margin-left: 25px;
 }
 
 /* Default hover effect (dark mode) */
@@ -271,6 +302,7 @@ body.light-mode .centered-text {
     position: relative;
     width: max-content;
     display: inline-block; 
+    margin-bottom: 10px;
 }
 
 body.light-mode .typed-text {
@@ -307,9 +339,59 @@ body.light-mode footer {
     color: #000;
 }
 
-/* Responsive Design */
+/* Responsive Design for Phones/Tablets */
 @media (max-width: 768px) {
-    .projects-content {
+    /* Adjust the navigation */
+    nav {
+        width: 90%;
         flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Adjust button for small screens */
+    .download-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Centered text adjustments */
+    .centered-text {
+        top: 40%;
+    }
+
+    .sentence {
+        font-size: 12px;
+    }
+
+    .typed-text {
+        font-size: 30px;
+        padding: 15px;
+    }
+
+    .typed-text::after {
+        font-size: 30px;
+    }
+
+    /* Adjust the spacing and layout of the content */
+    .cv-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .icon-container {
+        width: 28px;
+        height: 28px;
+    }
+
+    .icon-container i {
+        font-size: 14px;
     }
 }

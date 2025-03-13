@@ -23,7 +23,7 @@ const textToType = "Java and HTML/CSS <span class='developer'>Developer</span>";
 const typedTextElement = document.getElementById("typed-text");
 
 // Typing speed (milliseconds between each letter)
-const typingSpeed = 150;
+const typingSpeed = 85;
 
 // Function to simulate typing effect
 function typeText(text, index = 0) {
@@ -38,3 +38,19 @@ window.onload = () => {
     typeText(textToType);
 };
 
+// Disable right-click (context menu)
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+// Disable F12 (Developer Tools) key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12') {
+        event.preventDefault();
+    }
+
+    // Prevent Ctrl+U (View Source) and Ctrl+Shift+I (Inspect Element)
+    if (event.ctrlKey && (event.key === 'u' || event.key === 'I' || event.key === 'i')) {
+        event.preventDefault();
+    }
+});
