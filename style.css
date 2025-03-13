@@ -70,6 +70,31 @@ body.light-mode nav {
     outline: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+/* Styling for the download button */
+.download-btn {
+    background-color: #0950CD;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 7px; 
+    outline-width: 0.1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Fira Code', monospace;
+}
+body.light-mode .download-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hover effect for the button */
+.download-btn:hover {
+    background-color: #ffffff;
+    color:#000000;
+}
+
 /* Navigation Text */
 nav ul {
     list-style: none;
