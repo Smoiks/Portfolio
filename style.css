@@ -70,6 +70,10 @@ body.light-mode nav {
     outline: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.cv-button a {
+    text-decoration: none;
+}
+
 /* Styling for the download button */
 .download-btn {
     background-color: #0950CD;
@@ -83,6 +87,7 @@ body.light-mode nav {
     transition: background-color 0.3s ease;
     margin-top: 20px;
     font-family: 'Fira Code', monospace;
+    text-decoration: none;
 }
 body.light-mode .download-btn:hover {
     background-color: #000;
