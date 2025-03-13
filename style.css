@@ -343,12 +343,10 @@ body.light-mode footer {
 @media (max-width: 768px) {
     /* Adjust the navigation */
     nav {
-        width: 90%;
+        width: 60%;
         flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     nav ul li {
@@ -367,16 +365,20 @@ body.light-mode footer {
     }
 
     .sentence {
-        font-size: 12px;
+        font-size: 60%;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .typed-text {
-        font-size: 30px;
+        font-size: 100%;
         padding: 15px;
     }
 
     .typed-text::after {
-        font-size: 30px;
+        font-size: 20px;
+        top: 25%;
     }
 
     /* Adjust the spacing and layout of the content */
