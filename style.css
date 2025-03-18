@@ -12,7 +12,7 @@ html {
 body {
     font-family: 'Fira Code', monospace;
     transition: background-color 0.3s, color 0.3s;
-    height: 1500px;
+    height: max-content;
     padding-top: 80px;
     background-color: #000;
 
@@ -25,12 +25,12 @@ body {
 /* Dark Mode */
 body.dark-mode {
     background-color: #000;
-    color: #fff;
+    color: #dddddd;
 }
 
 /* Light Mode */
 body.light-mode {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000;
 }
 
@@ -60,7 +60,7 @@ nav {
     margin-bottom: 10px;
     padding-top: 14px;
     padding-bottom: 14px;
-    width: 650px;
+    width: 660px;
     top: 20px;
     z-index: 100;
     border-radius: 33px;
@@ -74,9 +74,9 @@ nav {
 
 /* Light Mode for Nav */
 body.light-mode nav {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000;
-    outline: 1px solid rgba(0, 0, 0, 0.15);
+    outline: 1px solid rgba(0, 0, 0, 0.237);
 }
 
 .cv-button a {
@@ -123,6 +123,8 @@ nav ul li {
     display: flex;
     align-items: center;
     position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /* Social dropdown */
@@ -188,6 +190,7 @@ body.light-mode .social:hover {
 .dropdown li {
     margin: 5px 0;
 }
+
 
 /* Light Mode Dropdown */
 body.light-mode .dropdown {
@@ -351,6 +354,8 @@ body.light-mode footer {
 
     nav ul li {
         margin: 10px 0;
+        margin-right: 10px;
+        margin-left: 10px;
     }
 
     /* Adjust button for small screens */
