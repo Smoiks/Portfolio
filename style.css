@@ -72,6 +72,7 @@ nav {
     transform: translateX(-50%);
 }
 
+
 /* Light Mode for Nav */
 body.light-mode nav {
     background-color: #ffffff;
@@ -329,18 +330,177 @@ body.light-mode .typed-text {
     50% {
         opacity: 0;
     }
-}
+}   
 
 /* Custom color for Developer */
 .developer {
     color: #0950CD;
 }
 
-/* Light Mode for Footer */
-body.light-mode footer {
-    background-color: #fff;
-    color: #000;
+#home {
+    padding-bottom: 50px; 
 }
+
+.Experience-section {
+    padding: 20px 0;
+    margin-top: 55%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.experience-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-left: -50px;
+}
+
+.line-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* space between circle and line */
+    margin-left: 20px;
+}
+
+.circle-outer {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #0950CD;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-inner {
+    width: 6px;
+    height: 6px;
+    background-color: #3ba100;
+    border-radius: 50%;
+}
+
+.circle-wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* space between circle and line */
+    margin-left: -17px;
+}
+
+.circle-outer2 {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #0950CD;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-inner2 {
+    width: 6px;
+    height: 6px;
+    background-color: #3ba100;
+    border-radius: 50%;
+}
+
+.h-line {
+    width: 1px;
+    height: 220px;
+    background-color: #888;
+    margin-left: 20.3px;
+    margin-bottom: -0.3px;
+    opacity: 0.5;
+    transform: scaleX(0.3); /* Makes it appear 0.5px wide */
+    transform-origin: left;
+}
+
+/* Rotated second line */
+.h-line2 {
+    width: 1px;
+    height: 27px;
+    background-color: #888;
+    transform: rotate(40deg) scaleX(0.3);
+    transform-origin: top center;
+    margin-left: 19.3px;
+    opacity: 0.5;
+}
+
+.h-line3 {
+    width: 1px;
+    height: 125px;
+    background-color: #888;
+    margin-left: -16px;
+    margin-top: -5.8px;
+    opacity: 0.5;
+    transform: scaleX(0.3); /* Makes it appear 0.5px wide */
+    transform-origin: left;
+}
+
+.Experience-section h2 {
+    text-align: left;
+    font-size: 65px;
+    margin-bottom: 45px;
+    margin-left: 17%;
+    font-family: sans-serif;
+    
+}
+
+.Experience-section h3 {
+    font-family: sans-serif;
+    font-size: 19px;
+    font-weight: 100; /* Thin */
+    margin-top: 45px;
+}
+
+.Experience-section h5 {
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 100; /* Thin */
+    color: #bebebe;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+body.light-mode .Experience-section h5 {
+    color: #252525;
+    
+}
+
+.work-experience {
+    margin-left: 11%;
+}
+
+.job-info {
+    color: rgb(255, 255, 255);
+    margin-top: 8px;
+}
+
+body.light-mode .job-info {
+    color: black;
+    font-weight: 450; /* Thin */
+}
+
+.job-info li {
+    font-size: 14px;
+    font-family: Roboto;
+}
+
+.vertical-line {
+    width: 0.1px; /* Line thickness */
+    height: 500px; /* Adjust height */
+    background-color: white; /* Line color */
+    margin-left: 200px;
+
+}
+
 
 /* Responsive Design for Phones/Tablets */
 @media (max-width: 768px) {
