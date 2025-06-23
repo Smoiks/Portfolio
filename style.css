@@ -383,8 +383,11 @@ body.light-mode .typed-text {
 .circle-inner {
     width: 6px;
     height: 6px;
-    background-color: #3ba100;
+    background-color: white;
     border-radius: 50%;
+}
+body.light-mode .circle-inner {
+    background-color: black;
 }
 
 .circle-wrapper2 {
@@ -407,8 +410,11 @@ body.light-mode .typed-text {
 .circle-inner2 {
     width: 6px;
     height: 6px;
-    background-color: #3ba100;
+    background-color: white;
     border-radius: 50%;
+}
+body.light-mode .circle-inner2 {
+    background-color: black;
 }
 
 .h-line {
@@ -418,7 +424,7 @@ body.light-mode .typed-text {
     margin-left: 20.3px;
     margin-bottom: -0.3px;
     opacity: 0.5;
-    transform: scaleX(0.3); /* Makes it appear 0.5px wide */
+    transform: scaleX(0.3); /* Makes it appear 0.3px wide */
     transform-origin: left;
 }
 
@@ -440,7 +446,7 @@ body.light-mode .typed-text {
     margin-left: -16px;
     margin-top: -5.8px;
     opacity: 0.5;
-    transform: scaleX(0.3); /* Makes it appear 0.5px wide */
+    transform: scaleX(0.3); /* Makes it appear 0.3px wide */
     transform-origin: left;
 }
 
@@ -500,6 +506,306 @@ body.light-mode .job-info {
     margin-left: 200px;
 
 }
+
+.Skills-section {
+    padding: 20px 0;
+    margin-top: 55%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.Skills-section h2 {
+    text-align: left;
+    font-size: 65px;
+    margin-bottom: 45px;
+    margin-left: 17%;
+    font-family: sans-serif;  
+    margin-top: -700px;
+}
+
+.Skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* full screen height */
+}
+
+.Skills-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+
+.box {
+  position: relative;
+  width: 310px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  border: none;
+  overflow: hidden; /* keep light effect inside */
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 28px rgb(255, 255, 255, 0.3);
+}
+
+.inner-box {
+  position: relative;
+  width: 90%;
+  height: 87%;
+    /* Radiant corners using multiple inset radial gradients */
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.09) 10px, transparent 40px),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.09) 10px, transparent 40px),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.09) 10px, transparent 40px),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.09) 10px, transparent 40px);
+  background-repeat: no-repeat;
+  background-position:
+    top left,
+    top right,
+    bottom left,
+    bottom right;
+  background-size: 40px 40px;  /* changed from white to transparent */
+  border-radius: 15px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Light effect */
+.inner-box::before {
+  content: "";
+  position: absolute;
+  top: var(--y, -9999px); /* hide initially */
+  left: var(--x, -9999px);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.45) 0%, transparent 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.inner-box:hover::before {
+  opacity: 1;
+}
+
+.text-logo-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3; /* text and logo above light */
+}
+
+.text-circle {
+  font-size: 30px;
+  margin-bottom: 10px;
+  z-index: 3;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  z-index: 3;
+  position: relative;
+}
+
+body.light-mode .box::before {
+  border: 0.5px solid rgb(0, 0, 0);
+}
+
+body.light-mode .corner {
+    color: #000;
+    background-color: white;
+}
+body.light-mode .circle {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 10%, rgba(255, 0, 0, 0) 50%);
+}
+body.light-mode .inner-box {
+  background-image:
+    radial-gradient(circle at top left, rgb(0, 0, 0, 0.06) 10px, transparent 40px),
+    radial-gradient(circle at top right, rgb(0, 0, 0, 0.06) 10px, transparent 40px),
+    radial-gradient(circle at bottom left, rgb(0, 0, 0, 0.06) 10px, transparent 40px),
+    radial-gradient(circle at bottom right, rgb(0, 0, 0, 0.06) 10px, transparent 40px);
+}
+body.light-mode .inner-box::before {
+    background: radial-gradient(circle, rgba(143, 143, 143, 1) 0%, transparent 70%);
+}
+body.light-mode .text-circle {
+    color: #000;
+}
+body.light-mode .logo {
+  filter: invert(1);
+}
+body.dark-mode .logo {
+  filter: none;
+}
+body.dark-mode .jslogo {
+    filter: invert(1);
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    position: relative;
+}
+body.dark-mode .javalogo {
+    filter: invert(1);
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    position: relative;
+}
+
+body.light-mode .jslogo {
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    position: relative;
+}
+body.light-mode .javalogo {
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    position: relative;
+}
+body.light-mode .sqllogo {
+    filter: invert(1);
+    width: 60px;
+    height: 60px;
+    transform: scale(3);
+    z-index: 3;
+    position: relative;
+}
+body.dark-mode .sqllogo {
+    width: 60px;
+    height: 60px;
+    transform: scale(3);
+    z-index: 3;
+    position: relative;
+}
+
+body.dark-mode .kotlogo {
+    filter: invert(1);
+    width: 60px;
+    height: 60px;
+    transform: scale(3);
+    z-index: 3;
+    position: relative;
+}
+
+.clickable-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+body.light-mode .kotlogo {
+    width: 60px;
+    height: 60px;
+    transform: scale(3);
+    z-index: 3;
+    position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 10%, rgba(255, 0, 0, 0) 50%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Behind text and image */
+  margin-top: 15px;
+}
+
+
+
+/* Use ::before to draw thin border */
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 0.5px solid white;
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Scales the box up by 5% */
+    z-index: 2; /* Optional: ensures it appears above other boxes if overlapping */
+}
+
+/* Corner + signs styling */
+.corner {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    background: black;
+    padding: 0 4px; /* add some horizontal padding so + overlaps nicely */
+    z-index: 10;
+    user-select: none;
+    }
+
+/* Position corners and overlap the border */
+.top-left {
+  top: -10px;
+  left: -10px;
+}
+
+.top-right {
+  top: -10px;
+  right: -10px;
+}
+
+.bottom-left {
+  bottom: -10px;
+  left: -10px;
+}
+
+.bottom-right {
+  bottom: -10px;
+  right: -10px;
+}
+
+
+
+
+
+
+body.light-mode .box {
+  border: none;  /* remove border */
+  outline: 0.5px solid rgb(255, 255, 255); /* add thin outline */
+  outline-offset: -4px; /* pull outline closer inside */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.3);
+}
+
 
 
 /* Responsive Design for Phones/Tablets */
