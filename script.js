@@ -69,4 +69,42 @@ document.querySelectorAll('.inner-box').forEach(box => {
   });
 });
 
+// Contact form submission without page reload
+const form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        form.reset(); 
+
+        // Create or update the thank you message below the form
+        let msg = document.getElementById('thank-you-message');
+        if (!msg) {
+          msg = document.createElement('p');
+          msg.id = 'thank-you-message';
+          form.parentNode.appendChild(msg);
+        }
+        msg.textContent = 'Thank you! Your message has been sent.';
+      } else {
+        response.json().then(data => {
+          if (data.errors) {
+            alert(data.errors.map(error => error.message).join(", "));
+          } else {
+            alert("Oops! There was a problem submitting your form.");
+          }
+        });
+      }
+    }).catch(() => {
+      alert("Oops! There was a problem submitting your form.");
+    });
+  });
+}
 

@@ -912,6 +912,20 @@ body.light-mode #contact button:hover {
     color: #ffffff;
 }
 
+#thank-you-message {
+    margin-top: -100px;
+    font-weight: bold;
+}
+
+body.dark-mode #thank-you-message {
+    color: white;
+}
+
+body.light-mode #thank-you-message {
+    color: black;
+}
+
+
 /* Responsive Design for Phones/Tablets */
 @media (max-width: 768px) {
     /* Adjust the navigation */
