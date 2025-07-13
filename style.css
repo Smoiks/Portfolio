@@ -24,7 +24,7 @@ body {
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #000;
+    background-image: linear-gradient(to top, #0d0d0d 0%, black 100%);    
     color: #dddddd;
 }
 
@@ -893,6 +893,7 @@ body.light-mode #contact textarea {
     color: #000000;
     transform: scale(1.025);
 }
+
 
 #contact textarea {
     width: 550px;
